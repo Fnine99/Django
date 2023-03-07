@@ -1,0 +1,33 @@
+{% block scripts %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+{% endblock %}
+
+<div>
+    <nav class="bp4-navbar bp4-dark">
+        <div class='parent'>
+            <div class="bp4-navbar-group bp4-align-left" style="">
+                <a role='button' class="bp4-navbar-heading bp4-minimal bp4-button bp4-large" tabindex="0" style="margin-right: 16px;" href="/">
+                    Home
+                </a>
+                <div class="bp4-input-group">
+                    <span class="bp4-icon bp4-icon-search"></span>
+                    <input class="bp4-input" type="text" placeholder="Enter a ticker" dir="auto" />
+                </div>
+            </div>
+            <div class='child' style="right:16px; margin-top: 16px;">
+                <button class="btn btn-outline-dark my-2 my-sm-0" style="margin-right: 16px;" onclick="location.href='/profile'">
+                    models
+                </button>
+
+                <a href="/auth" style="margin-right: 16px;">
+                    Login
+                </a>
+                <button class="btn btn-outline-dark my-2 my-sm-0" onclick="location.href='/logout'">
+                    Register
+                </button>
+            </div>
+            
+        </div>
+    </nav>
+</div>

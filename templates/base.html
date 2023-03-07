@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head style="">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="theme-color" content="#0000" />
+    <meta />
+    <title>
+        {% block title %}
+            Calculator
+        {% endblock %}
+    </title>
+    {% block styles %}
+    <!-- Style dependencies -->
+    <link href="https://unpkg.com/normalize.css@^8.0.1" rel="stylesheet" />
+    <!-- Blueprint stylesheets -->
+    <link href="https://unpkg.com/@blueprintjs/icons@^4.0.0/lib/css/blueprint-icons.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@blueprintjs/core@^4.0.0/lib/css/blueprint.css" rel="stylesheet" />
+    {% endblock %}
+
+    {% block scripts %}
+    <!-- Blueprint dependencies -->
+    <script src="https://unpkg.com/classnames@^2.2"></script>
+    <script src="https://unpkg.com/dom4@^2.1"></script>
+    <script src="https://unpkg.com/tslib@~2.3.1"></script>
+    <script src="https://unpkg.com/react@^16.14.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@^16.14.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-transition-group@^4.4.1/dist/react-transition-group.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@^2.5.4/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/react-popper@^2.2.4/dist/index.umd.min.js"></script>
+    <!-- Blueprint packages (note: packages must be topo-sorted, where dependencies come first) -->
+    <script src="https://unpkg.com/@blueprintjs/icons@^4.0.0"></script>
+    <script src="https://unpkg.com/@blueprintjs/core@^4.0.0"></script>
+    <script src="https://unpkg.com/@blueprintjs/table@^4.0.0"></script>
+    {% endblock %}
+</head>
+    
+<body style="position: relative; margin:0; margin-top: 0;">
+    <div style="background-color: lightcoral; background-size: cover; height: 100%; min-height: 100vh; width: 100vw; max-width: 100%; z-index:-1; position:absolute; top:0;left:0;">
+    </div>
+        {% include "layout/navbar.html" %}
+        <main style="padding:0 5%;">
+            {% block content %}
+            {% endblock %}
+        </main>
+        {% include "layout/footer.html" %} 
+    {% csrf_token %}
+</body>
+
+</html>

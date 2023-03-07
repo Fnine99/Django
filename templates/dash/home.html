@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+{{ block.super }}
+<link rel="stylesheet" href="https://unpkg.com/@blueprintjs/table@^4.0.0/lib/css/table.css">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock%}
+{% block content %}
+
+<div style="display: inline-block; width: 100%;">
+    <div style="margin:0; color:azure; display:inline-flex; ">
+        <h1>TICKER</h1>
+        <h2>name name</h2>
+    </div>
+    <div class="bp4-tabs" style="padding:20px;">
+        <ul class="bp4-tab-list {{.modifier}}" role="tablist">
+            <li class="bp4-tab" role="tab" aria-selected="true">Valuation</li>
+            <li class="bp4-tab" role="tab">Overview</li>
+            <li class="bp4-tab" role="tab">Compare</li>
+        </ul>
+        <!-- <div class="bp4-tab-panel" role="tabpanel">Selected panel</div>
+        <div class="bp4-tab-panel" role="tabpanel" aria-hidden="true">Another panel</div>
+        <div class="bp4-tab-panel" role="tabpanel" aria-hidden="true">Disabled panel</div> -->
+    </div>
+    <div style="display: inline-flex; width: 100%;">
+        <div style="width: 60%; padding: 0 5px;">
+            <div class="bp4-card bp4-dark bp4-round bp4-elevation-3 ">
+                <table class="bp4-html-table bp4-html-table-bordered bp4-dark bp4-compact bp4-interactive">
+                     <thead>
+                     <tr>
+                         <th>Project</th>
+                         <th>Description</th>
+                         <th>Technologies</th>
+                         <th>Contributors</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td>Blueprint</td>
+                         <td>CSS framework and UI toolkit</td>
+                         <td>Sass, TypeScript, React</td>
+                         <td>268</td>
+                     </tr>
+                     <tr>
+                         <td>TSLint</td>
+                         <td>Static analysis linter for TypeScript</td>
+                         <td>TypeScript</td>
+                         <td>403</td>
+                     </tr>
+                     <tr>
+                         <td>Plottable</td>
+                         <td>Composable charting library built on top of D3</td>
+                         <td>SVG, TypeScript, D3</td>
+                         <td>737</td>
+                     </tr>
+                     </tbody>
+                     <tfoot>
+                     <tr>
+                         <td colspan=3>Total</td>
+                         <td>1408</td>
+                     </tr>
+                     </tfoot>
+                 </table> 
+            </div>
+        </div>
+         <div style="width: 40%; padding: 0 5px;">
+            <div class="bp4-card bp4-dark bp4-round bp4-elevation-3 ">
+                <table class="bp4-html-table bp4-html-table-bordered bp4-dark bp4-compact bp4-interactive">
+                     <thead>
+                     <tr>
+                         <th>Project</th>
+                         <th>Description</th>
+                         <th>Technologies</th>
+                         <th>Contributors</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td>Blueprint</td>
+                         <td>CSS framework and UI toolkit</td>
+                         <td>Sass, TypeScript, React</td>
+                         <td>268</td>
+                     </tr>
+                     <tr>
+                         <td>TSLint</td>
+                         <td>Static analysis linter for TypeScript</td>
+                         <td>TypeScript</td>
+                         <td>403</td>
+                     </tr>
+                     <tr>
+                         <td>Plottable</td>
+                         <td>Composable charting library built on top of D3</td>
+                         <td>SVG, TypeScript, D3</td>
+                         <td>737</td>
+                     </tr>
+                     </tbody>
+                     <tfoot>
+                     <tr>
+                         <td colspan=3>Total</td>
+                         <td>1408</td>
+                     </tr>
+                     </tfoot>
+                 </table> 
+             </div>
+         </div>
+    </div>
+    
+</div>
+
+{% endblock %}
